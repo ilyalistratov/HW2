@@ -9,9 +9,7 @@ services:
       - data_volume:/boxfuse-sample-java-war-hello/ddd
 
   web:
-    build:
-      dockerfile: Dockerfile
-      context: .
+    image: tomcat:alpine
     ports:
       - '8080:8080'
     volumes:
