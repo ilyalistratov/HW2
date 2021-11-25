@@ -8,8 +8,8 @@ services:
       context: Build/
     volumes:
       - type: volume
-      - source: data_volume
-      - target: /ddd
+        source: data_volume
+        target: /ddd
 
   web:
     depends_on:
@@ -19,8 +19,8 @@ services:
       - '8080:8080'
     volumes:
       - type: volume
-      - source: data_volume
-      - target: /ddd
+        source: data_volume
+        target: /ddd
 
 volumes:
    data_volume:
