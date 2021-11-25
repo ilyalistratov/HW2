@@ -4,7 +4,7 @@ services:
   building:
     build:
       dockerfile: Dockerfile
-      context: ./l2
+      context: .
     volumes:
       - data_volume:/boxfuse-sample-java-war-hello/ddd
 
