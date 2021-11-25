@@ -1,6 +1,6 @@
 FROM alpine:latest
-RUN apt-get update
-RUN apt-get install tomcat9
+RUN apt update
+RUN apt install tomcat9
 RUN mkdir ddd
 WORKDIR /ddd
 
