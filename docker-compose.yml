@@ -19,7 +19,7 @@ services:
         source: data_volume
         target: /opt/tomcat/webapps
     depends_on:
-      - stage
+      - mvn
 
 volumes:
   data_volume:
