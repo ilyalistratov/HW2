@@ -1,24 +1,29 @@
-version: '3.7'
-services:
+ version: '3.7'
 
-  building:
+ services:
+
+  mav:
     build:
-      dockerfile: Dockerfile
-      context: .
+      dockerfile: Build/Dockerfile
+      context: Build/
     volumes:
-      - data_volume:/boxfuse-sample-java-war-hello/ddd
+      - type: volume
+      - source: data_volume
+      - target: /ddd
 
   web:
     depends_on:
-      - building
+      - mav
     image: tomcat:alpine
     ports:
       - '8080:8080'
     volumes:
-      - data_volume:/ddd
+      - type: volume
+      - source: data_volume
+      - target: /ddd
 
 
-volumes:
-  data_volume:
+ volumes:
+   data_volume:
 
 
