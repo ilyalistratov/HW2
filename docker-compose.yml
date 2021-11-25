@@ -9,6 +9,8 @@ services:
       - data_volume:/boxfuse-sample-java-war-hello/ddd
 
   web:
+    depends_on:
+      - building
     image: tomcat:alpine
     ports:
       - '8080:8080'
