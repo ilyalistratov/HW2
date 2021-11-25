@@ -5,7 +5,7 @@ services:
   mav:
     build:
       dockerfile: Build/Dockerfile
-      context: Build/
+      context: /Build
     volumes:
       - type: volume
         source: data_volume
