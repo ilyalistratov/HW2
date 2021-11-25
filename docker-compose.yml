@@ -1,6 +1,6 @@
- version: '3.7'
+version: '3.7'
 
- services:
+services:
 
   mav:
     build:
@@ -22,8 +22,7 @@
       - source: data_volume
       - target: /ddd
 
-
- volumes:
+volumes:
    data_volume:
 
 
