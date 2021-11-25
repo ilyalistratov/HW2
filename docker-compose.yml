@@ -2,27 +2,24 @@ version: '3.7'
 
 services:
 
-  mav:
+  stage:
     build:
-      dockerfile: Dockerfile
-      context: ./Build
+      context: Build/
     volumes:
       - type: volume
         source: data_volume
         target: /ddd
-
-  web:
-    depends_on:
-      - mav
-    image: tomcat:alpine
+  prod:
+    build:
+      context: prod/
     ports:
-      - '8080:8080'
+      - "8080:8080"
     volumes:
       - type: volume
         source: data_volume
         target: /opt/tomcat/webapps
+    depends_on:
+      - stage
 
 volumes:
-   data_volume:
-
-
+  data_volume:
