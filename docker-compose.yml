@@ -20,7 +20,7 @@ services:
     volumes:
       - type: volume
         source: data_volume
-        target: /ddd
+        target: /opt/tomcat/webapps
 
 volumes:
    data_volume:
