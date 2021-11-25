@@ -1,8 +1,8 @@
 # maven
 FROM ubuntu:latest
-RUN apt update
-RUN apt install maven
-RUN apt install maven
+RUN apt update -y
+RUN apt install maven -y
+RUN apt install maven -y
 RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
 WORKDIR boxfuse-sample-java-war-hello
 RUN ls
